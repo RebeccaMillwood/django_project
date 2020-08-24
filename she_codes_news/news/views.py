@@ -30,4 +30,6 @@ class AddStoryView(generic.CreateView):
     context_object_name = 'storyForm'
     template_name = 'news/createStory.html'
     success_url = reverse_lazy('news:index')
+
+
     
