@@ -12,5 +12,10 @@ class NewsStory(models.Model):
     )
     pub_date = models.DateTimeField()
     content = models.TextField()
-    image = models.FileField(upload_to='uploads')
+    image = models.TextField(default="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/golden-retriever-royalty-free-image-506756303-1560962726.jpg")
     
+    @property
+    def ret_image(self):
+        if self.image.startswith("http"):
+            return self.image
+        return "https://picsum.photos/600"
