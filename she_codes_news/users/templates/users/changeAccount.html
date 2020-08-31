@@ -1,7 +1,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h2>Change Account</h2>
+<h2>Welcome To Your Account!</h2>
+<h3>Hey {{ user.username }}, lovely to see you!</h3>
+<h4>Use the fields below if you'd like to update your account details:</h4>
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
