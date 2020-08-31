@@ -17,5 +17,9 @@ class CreateAccountView(CreateView):
 class ChangeAccountView(UpdateView):
     model = CustomUser
     form_class = CustomUserChangeForm
-    # success_url = reverse_lazy('users:changeAccount')
+    # success_url = reverse_lazy('news:index')
     template_name = 'users/changeAccount.html'
+
+    def get_success_url(self):
+        userid = self.kwargs['pk']
+        return reverse_lazy('users:changeAccount', kwargs={'pk': userid})
