@@ -2,11 +2,11 @@
 
 {% block content %}
 <h2>Welcome To Your Account!</h2>
-<h3>Hey {{ user.username }}, lovely to see you!</h3>
+<h3>Hey {{ user.username }}, it's lovely to see you!</h3>
 <h4>Use the fields below if you'd like to update your account details:</h4>
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit">Update Account</button>
+    <button type="submit">Update My Account!</button>
 </form>
 {% endblock %}
