@@ -13,7 +13,7 @@ class CustomUser(AbstractUser):
     about_me = models.TextField(max_length=500, blank=True)
     favourite_dog_breed = models.TextField(max_length=50, blank=True)
     favourite_cupcake_flavour = models.TextField(max_length=50, blank=True)
-
+    profile_picture = models.TextField(blank=True)
 
     def __str__(self):
         # return f'{self.username} Profile'

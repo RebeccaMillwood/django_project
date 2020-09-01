@@ -36,4 +36,24 @@ class AddStoryView(generic.CreateView):
         return super().form_valid(form)
 
 
-    
+class EditStoryView(generic.CreateView):
+    form_class = StoryForm
+    context_object_name = 'editStory'
+    template_name = 'news/editStory.html'
+    success_url = reverse_lazy('news:index')
+
+    # def form_valid(self, form):
+    #     form.instance.author = self.request.user
+    #     return super().form_valid(form)
+
+    def edit_story(request,slug):
+        story = Story.objects.get(slug=slug)
+        if request.method == 'POST':
+            form = forms.EditStory(request.POST, instance=story)
+            if form.is_valid():
+                form.save()
+                return redirect('story:list')
+        else:
+            form = forms.EditArticle(instance=article)
+        args = {'form': form}
+        return render(request, 'news/editStory.html', args)
