@@ -23,3 +23,6 @@ class ChangeAccountView(UpdateView):
     def get_success_url(self):
         userid = self.kwargs['pk']
         return reverse_lazy('users:changeAccount', kwargs={'pk': userid})
+
+
+
