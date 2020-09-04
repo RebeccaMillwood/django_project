@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 
 body {
-    background-color: rgb(240, 239, 239);
+    /* background-color: rgb(240, 239, 239); */
+    background-color:#dbbebb ;
 }
 
 header {
@@ -24,18 +25,21 @@ h1 {
 }
 
 h2 {
-   font-family: 'Happy Monkey', cursive;
+   font-family: 'Roboto Slab', serif;
    font-size: 2rem;
+   color:white;
 }
 
 h3 {
-    font-family: 'Happy Monkey', cursive;
+    font-family: 'Roboto Slab', serif;
     font-size: 1rem;
     margin: 0;
+    color:white;
 }
 
 h4 {
     font-family: monospace;
+    color:white;
 }
 
 #header-text {
@@ -53,13 +57,22 @@ nav {
 a {
     margin: 2px;
     text-decoration: none;
-    color: #000;
+    color:white;
 }
 
 a, p {
     font-family: monospace;
+    color: white;
 }
 
 button, input {
     font-family: monospace;
+    background-color: #8246AF;
+    color: #FDA103;
+}
+
+textarea {
+    font-family: monospace;
+    background-color: #8246AF;
+    color: #FDA103;
 }
