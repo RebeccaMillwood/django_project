@@ -7,6 +7,6 @@
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Login!</button>
-<h4>Don't have an account, but want one? <a href="{% url 'users:createAccount' %}">Nice! Create one here. </a> </h4>    
+<h4>Don't have an account, but want one? <a href="{% url 'users:createAccount' %}"><span style="color:#8246AF;">Nice! Create one here.</span></a> </h4>    
 </form>
 {% endblock %}

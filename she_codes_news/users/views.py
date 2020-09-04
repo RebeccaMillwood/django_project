@@ -25,4 +25,3 @@ class ChangeAccountView(UpdateView):
         return reverse_lazy('users:changeAccount', kwargs={'pk': userid})
 
 
-

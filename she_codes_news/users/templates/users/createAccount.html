@@ -7,6 +7,6 @@
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Create My Account!</button>
-<h4>Forgot you already have an account? <a href="{% url 'login' %}"> No worries, log back in here! </a> </h4> 
+<h4>Forgot you already have an account? <a href="{% url 'login' %}"><span style="color:#8246AF;">No worries, log back in here!</span></a> </h4> 
 </form>
 {% endblock %}
